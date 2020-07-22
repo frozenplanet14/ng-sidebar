@@ -1,26 +1,23 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "declaration": true,
-    "removeComments": true,
-    "outDir": "lib_commonjs/",
-    "rootDir": "src",
-    "lib": ["dom", "es5", "es2015.core", "es2015.collection", "es2015.iterable", "es2015.promise"]
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false,
-  "angularCompilerOptions": {
-    "decoratorsAs": "static fields",
-    "skipTemplateCodegen": true,
-    "preserveWhitespaces": false
-  }
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/ng-sidebar/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ng-sidebar/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/demo/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/demo/tsconfig.spec.json"
+    }
+]
 }

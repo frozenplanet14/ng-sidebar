@@ -1,54 +1,51 @@
 {
   "name": "ng-sidebar",
-  "version": "9.4.2",
-  "description": "Angular sidebar component.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/arkon/ng-sidebar.git"
-  },
-  "homepage": "http://echeung.me/ng-sidebar/",
-  "bugs": {
-    "url": "https://github.com/arkon/ng-sidebar/issues"
-  },
-  "files": [
-    "lib_commonjs/*",
-    "lib_esmodule/*",
-    "README.md",
-    "LICENSE"
-  ],
-  "author": "Eugene Cheung",
-  "license": "MIT",
-  "keywords": [
-    "angular",
-    "ng",
-    "sidebar",
-    "component"
-  ],
-  "main": "./lib_commonjs/index.js",
-  "module": "./lib_esmodule/index.js",
-  "jsnext:main": "./lib_esmodule/index.js",
-  "typings": "./lib_commonjs/index.d.ts",
+  "version": "0.0.0",
   "scripts": {
-    "lint": "tslint --project tsconfig.json src/**/*.ts",
-    "build:commonjs": "rimraf lib_commonjs && ngc -p tsconfig.json",
-    "build:esmodule": "rimraf lib_esmodule && ngc -p tsconfig.module.json",
-    "build": "npm run lint && npm run build:commonjs && npm run build:esmodule",
-    "prepare": "npm run build"
+    "ng": "ng",
+    "start": "ng serve --project=demo",
+    "build:demo": "ng build --prod --project=demo --base-href /demo/ --deploy-url /demo/",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "build:lib": "ng build --project=ng-sidebar",
+    "build:prod": "ng build --project=ng-sidebar --prod"
   },
-  "peerDependencies": {
-    "@angular/core": ">=8.0.0",
-    "@angular/common": ">=8.0.0"
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~10.0.2",
+    "@angular/common": "~10.0.2",
+    "@angular/compiler": "~10.0.2",
+    "@angular/core": "~10.0.2",
+    "@angular/forms": "~10.0.2",
+    "@angular/platform-browser": "~10.0.2",
+    "@angular/platform-browser-dynamic": "~10.0.2",
+    "@angular/router": "~10.0.2",
+    "rxjs": "~6.5.5",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular/common": "^8.2.14",
-    "@angular/compiler": "^8.2.14",
-    "@angular/compiler-cli": "^8.2.14",
-    "@angular/core": "^8.2.14",
-    "@angular/platform-browser": "^8.2.14",
-    "rimraf": "^3.0.2",
-    "rxjs": "^6.5.5",
-    "tslint": "^5.20.1",
-    "typescript": "~3.4.0",
-    "zone.js": "~0.9.1"
+    "@angular-devkit/build-angular": "~0.1000.3",
+    "@angular-devkit/build-ng-packagr": "~0.1000.3",
+    "@angular/cli": "~10.0.1",
+    "@angular/compiler-cli": "~10.0.2",
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^6.0.0-next.1",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.0.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~3.3.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^10.0.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~3.9.5"
   }
 }
