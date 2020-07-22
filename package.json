@@ -1,16 +1,40 @@
 {
   "name": "ng-sidebar",
-  "version": "0.0.0",
+  "version": "9.4.2",
+  "description": "Angular sidebar component.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arkon/ng-sidebar.git"
+  },
+  "homepage": "http://echeung.me/ng-sidebar/",
+  "bugs": {
+    "url": "https://github.com/arkon/ng-sidebar/issues"
+  },
+  "files": [
+    "dist/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "Eugene Cheung",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "ng",
+    "sidebar",
+    "component"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project=demo",
     "build:demo": "ng build --prod --project=demo --base-href /demo/ --deploy-url /demo/",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint --project=ng-sidebar",
     "e2e": "ng e2e",
+    "postinstall": "npm run build:lib",
     "build:lib": "ng build --project=ng-sidebar",
-    "build:prod": "ng build --project=ng-sidebar --prod"
+    "build:prod": "ng build --project=ng-sidebar --prod && npm run pack:lib",
+    "pack:lib": "npm pack ./dist/ng-sidebar"
   },
   "private": true,
   "dependencies": {
